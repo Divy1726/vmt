@@ -1,9 +1,3 @@
-/* ======================================================
-   VISHWAKARMA MECH TECH — Industrial Design System v3
-   IPCL-Inspired Animations + Heavy Industrial Aesthetic
-   ====================================================== */
-
-/* CSS Variables */
 :root {
     --primary-color: #0B1C2E;
     --primary-light: #1A2D42;
@@ -36,7 +30,6 @@
     --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset & Base */
 *,
 *::before,
 *::after {
@@ -75,10 +68,6 @@ img {
     height: auto;
 }
 
-
-/* ======================================================
-   INDUSTRIAL MARQUEE / TICKER
-   ====================================================== */
 .industry-ticker {
     background: var(--bg-dark);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -121,7 +110,6 @@ img {
     }
 }
 
-/* Utilities */
 .container {
     width: 90%;
     max-width: var(--container-width);
@@ -156,13 +144,11 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Subtle dot pattern for light sections */
 .bg-light {
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
     background-size: 24px 24px;
 }
 
-/* Blueprint grid for dark sections */
 .bg-dark {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
@@ -170,9 +156,6 @@ img {
     background-size: 50px 50px;
 }
 
-/* ======================================================
-   TYPOGRAPHY — INDUSTRIAL
-   ====================================================== */
 h1,
 h2,
 h3,
@@ -205,7 +188,6 @@ h6 {
     padding: 0 1.5rem;
 }
 
-/* Horizontal lines flanking section label */
 .section-label::before,
 .section-label::after {
     content: '';
@@ -245,7 +227,6 @@ h6 {
     overflow: hidden;
 }
 
-/* Animated laser sweep on section line */
 .section-line::after {
     content: '';
     position: absolute;
@@ -275,9 +256,6 @@ h6 {
     line-height: 1.7;
 }
 
-/* ======================================================
-   BUTTONS
-   ====================================================== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -305,7 +283,6 @@ h6 {
     transform: translateX(4px);
 }
 
-/* Sweep effect */
 .btn::before {
     content: '';
     position: absolute;
@@ -357,9 +334,6 @@ h6 {
     box-shadow: var(--shadow-lg);
 }
 
-/* ======================================================
-   HEADER & NAVIGATION
-   ====================================================== */
 .header {
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: none;
@@ -464,7 +438,6 @@ h6 {
     cursor: pointer;
 }
 
-/* Mobile Navigation */
 .mobile-nav-overlay {
     position: fixed;
     inset: 0;
@@ -513,9 +486,6 @@ h6 {
     transform: translateX(10px);
 }
 
-/* ======================================================
-   HERO — IPCL-STYLE IMAGE SLIDESHOW
-   ====================================================== */
 .hero {
     height: 100vh;
     min-height: 650px;
@@ -527,7 +497,6 @@ h6 {
     background: var(--primary-color);
 }
 
-/* Slideshow background images */
 .hero-slide {
     position: absolute;
     inset: 0;
@@ -568,7 +537,6 @@ h6 {
         url('precices cutting.jpg');
 }
 
-/* Slide progress bar at bottom of hero */
 .hero-progress {
     position: absolute;
     bottom: 0;
@@ -579,7 +547,6 @@ h6 {
     transition: width 0.3s linear;
 }
 
-/* Blueprint grid on hero */
 .hero-grid-overlay {
     position: absolute;
     inset: 0;
@@ -609,7 +576,6 @@ h6 {
     overflow: hidden;
 }
 
-/* Reveal animation wrapper */
 .reveal-wrap {
     overflow: hidden;
     display: block;
@@ -652,7 +618,6 @@ h6 {
     flex-wrap: wrap;
 }
 
-/* Hero slide indicators */
 .hero-indicators {
     position: absolute;
     bottom: 2.5rem;
@@ -678,9 +643,6 @@ h6 {
     transform: scale(1.2);
 }
 
-/* ======================================================
-   STATS BAR
-   ====================================================== */
 .stats-bar {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0a1628 100%);
     padding: 3rem 0;
@@ -729,9 +691,6 @@ h6 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ======================================================
-   SERVICES — IPCL CARD STYLE
-   ====================================================== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -747,7 +706,6 @@ h6 {
     overflow: hidden;
 }
 
-/* Animated bottom border */
 .service-card::after {
     content: '';
     position: absolute;
@@ -764,7 +722,6 @@ h6 {
     width: 100%;
 }
 
-/* Number watermark */
 .service-card .card-number {
     position: absolute;
     top: -5px;
@@ -836,9 +793,6 @@ h6 {
     gap: 0.75rem;
 }
 
-/* ======================================================
-   ABOUT SECTION
-   ====================================================== */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -892,7 +846,6 @@ h6 {
     box-shadow: var(--shadow-xl);
 }
 
-/* Decorative corner brackets */
 .about-image::before,
 .about-image::after {
     content: '';
@@ -951,9 +904,6 @@ h6 {
     margin-top: 0.25rem;
 }
 
-/* ======================================================
-   MATERIALS
-   ====================================================== */
 .materials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1014,9 +964,6 @@ h6 {
     color: var(--text-medium);
 }
 
-/* ======================================================
-   GALLERY — IPCL PRODUCT CARD STYLE
-   ====================================================== */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -1069,7 +1016,6 @@ h6 {
     transition: all 0.5s ease 0.2s;
 }
 
-/* View icon */
 .gallery-overlay::after {
     content: '\f00e';
     font-family: 'Font Awesome 6 Free';
@@ -1107,7 +1053,6 @@ h6 {
     opacity: 0.6;
 }
 
-/* Gallery Page Specifics */
 .gallery-category {
     margin-bottom: 4rem;
 }
@@ -1120,9 +1065,6 @@ h6 {
     display: inline-block;
 }
 
-/* ======================================================
-   CONTACT
-   ====================================================== */
 .contact {
     position: relative;
     color: var(--bg-white);
@@ -1179,7 +1121,6 @@ h6 {
     color: var(--bg-white);
 }
 
-/* Fix phone icon direction */
 .fa-phone-alt {
     transform: scaleX(-1);
 }
@@ -1206,9 +1147,6 @@ h6 {
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ======================================================
-   WHATSAPP FLOAT
-   ====================================================== */
 .whatsapp-float {
     position: fixed;
     bottom: 2rem;
@@ -1245,9 +1183,6 @@ h6 {
     }
 }
 
-/* ======================================================
-   PAGE HEADER
-   ====================================================== */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0a1628 100%);
     padding: 9rem 0 3.5rem;
@@ -1294,9 +1229,6 @@ h6 {
     color: var(--secondary-color);
 }
 
-/* ======================================================
-   FACTSHEET TABLE
-   ====================================================== */
 .factsheet-wrapper {
     max-width: 800px;
     margin: 0 auto;
@@ -1344,9 +1276,6 @@ h6 {
     color: var(--secondary-color);
 }
 
-/* ======================================================
-   FOOTER
-   ====================================================== */
 .footer {
     background: var(--primary-color);
     color: #6b7280;
@@ -1417,11 +1346,6 @@ h6 {
     color: #6b7280;
 }
 
-/* ======================================================
-   SCROLL ANIMATIONS — IPCL STYLE
-   ====================================================== */
-
-/* Fade up (default) */
 .fade-in {
     opacity: 0;
     transform: translateY(50px);
@@ -1433,7 +1357,6 @@ h6 {
     transform: translateY(0);
 }
 
-/* Slide from left */
 .slide-left {
     opacity: 0;
     transform: translateX(-80px);
@@ -1445,7 +1368,6 @@ h6 {
     transform: translateX(0);
 }
 
-/* Slide from right */
 .slide-right {
     opacity: 0;
     transform: translateX(80px);
@@ -1457,7 +1379,6 @@ h6 {
     transform: translateX(0);
 }
 
-/* Scale up */
 .scale-in {
     opacity: 0;
     transform: scale(0.8);
@@ -1469,7 +1390,6 @@ h6 {
     transform: scale(1);
 }
 
-/* Clip reveal (IPCL style text reveal) */
 .clip-reveal {
     clip-path: inset(0 0 100% 0);
     transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1479,7 +1399,6 @@ h6 {
     clip-path: inset(0 0 0% 0);
 }
 
-/* Stagger delays */
 .stagger-1 {
     transition-delay: 0.1s !important;
 }
@@ -1500,9 +1419,6 @@ h6 {
     transition-delay: 0.5s !important;
 }
 
-/* ======================================================
-   RESPONSIVE
-   ====================================================== */
 @media (max-width: 992px) {
 
     .about-grid,
@@ -1593,6 +1509,30 @@ h6 {
     .section-label::before,
     .section-label::after {
         display: none;
+    }
+
+    .contact-wrapper {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .contact-details p,
+    .contact-details a {
+        word-break: break-all;
+        overflow-wrap: break-word;
+        font-size: 0.9rem;
+    }
+
+    .contact-info-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .map-container {
+        min-height: 280px;
+    }
+
+    .map-container iframe {
+        min-height: 280px;
     }
 }
 

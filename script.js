@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===== HERO TEXT REVEAL =====
     function triggerHeroReveal() {
         const reveals = document.querySelectorAll('.reveal-wrap');
         reveals.forEach((wrap, i) => {
@@ -10,10 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Trigger hero reveal on page load
     triggerHeroReveal();
 
-    // ===== HERO IMAGE SLIDESHOW =====
     const heroSlides = document.querySelectorAll('.hero-slide');
     const heroDots = document.querySelectorAll('.hero-dot');
     const progressBar = document.getElementById('heroProgress');
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         heroDots[index].classList.add('active');
         currentSlide = index;
 
-        // Reset progress bar
         startProgress();
     }
 
@@ -68,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== MOBILE NAVIGATION =====
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const closeMenuBtn = document.querySelector('.close-menu-btn');
     const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
@@ -88,13 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
     mobileNavLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-    // ===== STICKY HEADER =====
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // ===== SMOOTH SCROLL =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -110,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== SCROLL ANIMATIONS (IntersectionObserver) =====
     const animatedEls = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in, .clip-reveal');
 
     const observer = new IntersectionObserver((entries) => {
@@ -125,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animatedEls.forEach(el => observer.observe(el));
 
-    // ===== ANIMATED COUNTERS =====
     const statNumbers = document.querySelectorAll('.stat-number[data-count]');
 
     function animateCounter(el) {
@@ -166,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
         statNumbers.forEach(el => counterObserver.observe(el));
     }
 
-    // ===== 3D TILT ON SERVICE CARDS (Desktop) =====
     if (window.matchMedia('(min-width: 769px) and (hover: hover)').matches) {
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
@@ -184,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===== PARALLAX HERO =====
     const hero = document.querySelector('.hero');
     if (hero && window.matchMedia('(min-width: 769px)').matches) {
         let ticking = false;
