@@ -1325,17 +1325,50 @@ h6 {
 
 .footer-col ul li {
     margin-bottom: 0.75rem;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer-col ul li a {
     color: #9ca3af;
     font-size: 0.95rem;
     transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-col ul li>i {
+    width: 1.25em;
+    text-align: center;
+    flex-shrink: 0;
+    color: #9ca3af;
 }
 
 .footer-col ul li a:hover {
     color: var(--secondary-color);
     padding-left: 5px;
+}
+
+.footer-col ul li a i {
+    width: 1.25em;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.footer-col ul li a:has(i):hover {
+    padding-left: 0;
+}
+
+.footer-col ul li a[href^="mailto"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 100%;
 }
 
 .footer-bottom {
