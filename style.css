@@ -1136,6 +1136,10 @@ h6 {
     color: #9ca3af;
 }
 
+.contact-details p a {
+    display: block;
+}
+
 .contact-details a:hover {
     color: var(--secondary-color);
 }
