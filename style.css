@@ -502,9 +502,10 @@ h6 {
     inset: 0;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1.5s ease-in-out;
-    transform: scale(1.05);
+    transform: scale(1);
     animation: hero-zoom 12s ease-in-out infinite alternate;
 }
 
@@ -514,27 +515,27 @@ h6 {
 
 @keyframes hero-zoom {
     0% {
-        transform: scale(1);
+        transform: scale(0.99);
     }
 
     100% {
-        transform: scale(1.08);
+        transform: scale(1.05);
     }
 }
 
 .hero-slide:nth-child(1) {
     background-image: linear-gradient(135deg, rgba(11, 28, 46, 0.88) 0%, rgba(11, 28, 46, 0.65) 100%),
-        url('g (2).jpeg');
+        url('machine\ \(1\).jpeg');
 }
 
 .hero-slide:nth-child(2) {
     background-image: linear-gradient(135deg, rgba(11, 28, 46, 0.88) 0%, rgba(11, 28, 46, 0.65) 100%),
-        url('g (10).jpeg');
+        url('g\ \(10\).jpeg');
 }
 
 .hero-slide:nth-child(3) {
     background-image: linear-gradient(135deg, rgba(11, 28, 46, 0.88) 0%, rgba(11, 28, 46, 0.65) 100%),
-        url('g (1).jpeg');
+        url('g (12).jpeg');
 }
 
 .hero-progress {
