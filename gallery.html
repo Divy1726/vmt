@@ -229,7 +229,81 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-img">
+            <div class="lightbox-caption">
+                <h4 id="lightbox-title"></h4>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        (function () {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDesc = document.getElementById('lightbox-desc');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const item = galleryItems[index];
+                const img = item.querySelector('img');
+                const title = item.querySelector('.gallery-overlay h4');
+                const desc = item.querySelector('.gallery-overlay p');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxTitle.textContent = title ? title.textContent : '';
+                lightboxDesc.textContent = desc ? desc.textContent : '';
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                openLightbox(currentIndex);
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % galleryItems.length;
+                openLightbox(currentIndex);
+            }
+
+            galleryItems.forEach(function (item, index) {
+                item.addEventListener('click', function () {
+                    openLightbox(index);
+                });
+            });
+
+            document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+            document.querySelector('.lightbox-prev').addEventListener('click', showPrev);
+            document.querySelector('.lightbox-next').addEventListener('click', showNext);
+
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            });
+        })();
+    </script>
 </body>
 
 </html>
